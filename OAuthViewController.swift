@@ -15,7 +15,7 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var progress: UIProgressView!
     
-    let url = "http://localhost:9000?client_id=1&scope=/asdfsdf"
+    let url = "http://192.168.1.73:9000?client_id=1&scope=/asdfsdf"
     
     var webView : WKWebView?
     
