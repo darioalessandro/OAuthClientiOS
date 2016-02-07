@@ -11,7 +11,7 @@ import WebKit
 
 class OAuthViewController : UIViewController, WKNavigationDelegate {
     
-    var result : (OAuthLoginResult -> Void)?
+    var result : ((OAuthLoginData?, NSError?) -> Void)?
     
     @IBOutlet weak var progress: UIProgressView!
     
@@ -21,6 +21,9 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
     
     @IBAction func cancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        if let result = self.result {
+            result(nil, NSError(domain: "User did not login", code: 0, userInfo: nil))
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,7 +58,7 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
                let username = jsonDict["username"] as? String,
                let token = jsonDict.valueForKeyPath("token.token") as? String,
                let refreshToken = jsonDict.valueForKeyPath("token.refreshToken") as? String {
-                result(OAuthLoginResult(username: username, token: token, refreshToken: refreshToken))
+                result(OAuthLoginData(username: username, token: token, refreshToken: refreshToken), nil)
                self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 self.performSelector(Selector("pollCredentials:"), withObject: webView, afterDelay: 1)

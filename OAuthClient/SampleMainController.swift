@@ -14,6 +14,13 @@ class SampleMainController: UITableViewController {
     @IBOutlet weak var connectedAs: UITableViewCell!
     @IBOutlet weak var login: UITableViewCell!
     @IBOutlet weak var logout: UITableViewCell!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.connectedAs.hidden = true
+        self.logout.hidden = true
+        self.login.hidden = false
+    }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
@@ -21,17 +28,28 @@ class SampleMainController: UITableViewController {
         if(cell == connectedAs) {
             
         } else if(cell == login) {
-            OAuthClient.login(self, result : self.loginResult)
+            OAuthClient.sharedInstance.login(self, result : self.loginResult)
         } else if(cell == logout) {
-            OAuthClient.logout(self.logoutResult)
+            OAuthClient.sharedInstance.logout(self.logoutResult)
         }
     }
     
-    var loginResult : (OAuthLoginResult) -> Void = {(result : OAuthLoginResult) in
-        
+    lazy var loginResult : (OAuthLoginData?, NSError?) -> Void = {[unowned self](data : OAuthLoginData?, error : NSError?) in
+        if let loginData = data {
+            self.connectedAs.hidden = false
+            self.logout.hidden = false
+            self.login.hidden = true
+            self.connectedAs.detailTextLabel!.text = loginData.username
+        } else {
+            self.connectedAs.hidden = true
+            self.logout.hidden = true
+            self.login.hidden = false
+        }
     }
     
-    var logoutResult : (Bool) -> Void = {(result : Bool) in
-        
+    lazy var logoutResult : (Bool) -> Void = {[unowned self](result : Bool) in
+        self.connectedAs.hidden = true
+        self.logout.hidden = true
+        self.login.hidden = false
     }
 }

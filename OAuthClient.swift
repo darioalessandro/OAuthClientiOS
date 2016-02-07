@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct OAuthLoginResult {
-    let username : String
-    let token : String
-    let refreshToken : String
+public struct OAuthLoginData {
+    public let username : String
+    public let token : String
+    public let refreshToken : String
     
     init(username : String,
         token : String,
@@ -32,16 +32,29 @@ public class OAuthClient : NSObject {
      Method to kick off the login process
     */
     
-    public class func login(context: UIViewController, result : (OAuthLoginResult) -> Void) -> Void {
+    public static let sharedInstance = OAuthClient()
+    
+    override private init() {
+        super.init()
+    }
+    
+    public var loginData : OAuthLoginData?
+    
+    public func login(context: UIViewController, result : (OAuthLoginData?, NSError?) -> Void) -> Void {
         let bundle = NSBundle(forClass:OAuthViewController.self)
         let storyBoard : UIStoryboard = UIStoryboard(name: "OAuthStoryboard", bundle: bundle)
         let navController : UINavigationController = storyBoard.instantiateInitialViewController()! as! UINavigationController
         let rootViewController = navController.viewControllers.first as! OAuthViewController
-        rootViewController.result = result
+        rootViewController.result = {(res : OAuthLoginData?, error : NSError?) in
+            self.loginData = res
+            result(res,error)
+        }
+        
         context.presentViewController(navController, animated: true, completion: nil)
     }
     
-    public class func logout(result : (Bool) -> Void) -> Void {
+    public func logout(result : (Bool) -> Void) -> Void {
+        self.loginData = nil
         result(true)
     }
     
