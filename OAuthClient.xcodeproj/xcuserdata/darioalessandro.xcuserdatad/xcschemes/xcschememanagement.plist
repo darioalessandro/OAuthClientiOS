@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>OAuthClientFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>062649B91C669021000978BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>062649C21C669021000978BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>062FFBBB1C668D980012879C</key>
 		<dict>
 			<key>primary</key>

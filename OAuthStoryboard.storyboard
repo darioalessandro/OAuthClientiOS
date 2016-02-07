@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l55-yF-Ybf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="V7o-KG-ghr">
+            <objects>
+                <navigationController id="l55-yF-Ybf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hW3-E9-cyx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fW6-Jj-u8n" kind="relationship" relationship="rootViewController" id="33I-6d-bDc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yz1-E6-LSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456" y="345"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="72k-Xm-Xeg">
+            <objects>
+                <viewController id="fW6-Jj-u8n" customClass="OAuthViewController" customModule="OAuthClientFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tNa-jh-KWy"/>
+                        <viewControllerLayoutGuide type="bottom" id="1vT-7u-Zs6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a40-Zy-KNP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lMj-Ld-pxD" userLabel="Progress">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Bcj-Lj-Wfu"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lMj-Ld-pxD" firstAttribute="leading" secondItem="a40-Zy-KNP" secondAttribute="leadingMargin" constant="-20" id="4KP-yA-mkX"/>
+                            <constraint firstItem="lMj-Ld-pxD" firstAttribute="top" secondItem="tNa-jh-KWy" secondAttribute="bottom" id="9h2-E5-lNb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMj-Ld-pxD" secondAttribute="trailing" constant="-20" id="A0Z-uh-OWO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nIe-GU-BED">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="W2S-NZ-Q98">
+                            <connections>
+                                <action selector="cancel:" destination="fW6-Jj-u8n" id="JME-Lv-38A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progress" destination="lMj-Ld-pxD" id="Sj7-9z-6CR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1I-np-KsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="345"/>
+        </scene>
+    </scenes>
+</document>

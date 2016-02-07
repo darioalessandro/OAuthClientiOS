@@ -38,6 +38,16 @@
                ReferencedContainer = "container:OAuthClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "062649C21C669021000978BB"
+               BuildableName = "OAuthClientFrameworkTests.xctest"
+               BlueprintName = "OAuthClientFrameworkTests"
+               ReferencedContainer = "container:OAuthClient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
