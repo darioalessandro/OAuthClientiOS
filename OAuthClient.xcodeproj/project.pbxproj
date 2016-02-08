@@ -13,14 +13,14 @@
 		062649CB1C669021000978BB /* OAuthClientFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062649CA1C669021000978BB /* OAuthClientFrameworkTests.swift */; };
 		062649CF1C669021000978BB /* OAuthClientFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062649BA1C669021000978BB /* OAuthClientFramework.framework */; };
 		062649D01C669021000978BB /* OAuthClientFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062649BA1C669021000978BB /* OAuthClientFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		062649DD1C6690F3000978BB /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062649DB1C6690E8000978BB /* OAuthClient.swift */; };
-		062649DE1C669282000978BB /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062649D91C669090000978BB /* OAuthViewController.swift */; };
-		062649E31C66C624000978BB /* OAuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062649E21C66C624000978BB /* OAuthStoryboard.storyboard */; };
 		062FFBC01C668D980012879C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FFBBF1C668D980012879C /* AppDelegate.swift */; };
 		062FFBC51C668D980012879C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062FFBC31C668D980012879C /* Main.storyboard */; };
 		062FFBC71C668D980012879C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062FFBC61C668D980012879C /* Assets.xcassets */; };
 		062FFBCA1C668D980012879C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062FFBC81C668D980012879C /* LaunchScreen.storyboard */; };
 		062FFBD51C668D980012879C /* OAuthClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FFBD41C668D980012879C /* OAuthClientTests.swift */; };
+		06C30EE11C68530D00410A09 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C30EDE1C68530D00410A09 /* OAuthClient.swift */; };
+		06C30EE21C68530D00410A09 /* OAuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */; };
+		06C30EE31C68530D00410A09 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C30EE01C68530D00410A09 /* OAuthViewController.swift */; };
 		C4BBC1E8DE0B60DB37AB711C /* Pods_OAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004C3D9BA7EC904223AFDAD8 /* Pods_OAuthClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,9 +78,6 @@
 		062649C31C669021000978BB /* OAuthClientFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAuthClientFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		062649CA1C669021000978BB /* OAuthClientFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthClientFrameworkTests.swift; sourceTree = "<group>"; };
 		062649CC1C669021000978BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		062649D91C669090000978BB /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
-		062649DB1C6690E8000978BB /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
-		062649E21C66C624000978BB /* OAuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OAuthStoryboard.storyboard; sourceTree = "<group>"; };
 		062FFBBC1C668D980012879C /* OAuthClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuthClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062FFBBF1C668D980012879C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		062FFBC41C668D980012879C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +87,9 @@
 		062FFBD01C668D980012879C /* OAuthClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAuthClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		062FFBD41C668D980012879C /* OAuthClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthClientTests.swift; sourceTree = "<group>"; };
 		062FFBD61C668D980012879C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06C30EDE1C68530D00410A09 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthClient.swift; path = OAuthClientFramework/OAuthClient.swift; sourceTree = "<group>"; };
+		06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OAuthStoryboard.storyboard; path = OAuthClientFramework/OAuthStoryboard.storyboard; sourceTree = "<group>"; };
+		06C30EE01C68530D00410A09 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = OAuthClientFramework/OAuthViewController.swift; sourceTree = "<group>"; };
 		4ED547A1227CA60541CA418E /* Pods-OAuthClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthClient/Pods-OAuthClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BC7B308EE1CFA61D2F582709 /* Pods-OAuthClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthClient/Pods-OAuthClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,9 +150,9 @@
 		062649D81C669068000978BB /* OAuthClientFramework */ = {
 			isa = PBXGroup;
 			children = (
-				062649D91C669090000978BB /* OAuthViewController.swift */,
-				062649DB1C6690E8000978BB /* OAuthClient.swift */,
-				062649E21C66C624000978BB /* OAuthStoryboard.storyboard */,
+				06C30EDE1C68530D00410A09 /* OAuthClient.swift */,
+				06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */,
+				06C30EE01C68530D00410A09 /* OAuthViewController.swift */,
 			);
 			name = OAuthClientFramework;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062649E31C66C624000978BB /* OAuthStoryboard.storyboard in Resources */,
+				06C30EE21C68530D00410A09 /* OAuthStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062649DD1C6690F3000978BB /* OAuthClient.swift in Sources */,
-				062649DE1C669282000978BB /* OAuthViewController.swift in Sources */,
+				06C30EE31C68530D00410A09 /* OAuthViewController.swift in Sources */,
+				06C30EE11C68530D00410A09 /* OAuthClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +525,7 @@
 		062649D21C669021000978BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -536,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackfireapps.OAuthClientFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -544,6 +546,7 @@
 		062649D31C669021000978BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -725,6 +728,7 @@
 				062649D31C669021000978BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		062649D51C669021000978BB /* Build configuration list for PBXNativeTarget "OAuthClientFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +737,7 @@
 				062649D71C669021000978BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		062FFBB71C668D980012879C /* Build configuration list for PBXProject "OAuthClient" */ = {
 			isa = XCConfigurationList;
