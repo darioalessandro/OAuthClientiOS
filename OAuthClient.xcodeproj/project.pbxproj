@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060FC8111C685905006B542A /* OAuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 060FC8101C685905006B542A /* OAuthStoryboard.storyboard */; };
 		062649B41C668FFC000978BB /* SampleMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062649B31C668FFC000978BB /* SampleMainController.swift */; };
 		062649BD1C669021000978BB /* OAuthClientFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 062649BC1C669021000978BB /* OAuthClientFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		062649C41C669021000978BB /* OAuthClientFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062649BA1C669021000978BB /* OAuthClientFramework.framework */; };
@@ -19,7 +20,6 @@
 		062FFBCA1C668D980012879C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062FFBC81C668D980012879C /* LaunchScreen.storyboard */; };
 		062FFBD51C668D980012879C /* OAuthClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FFBD41C668D980012879C /* OAuthClientTests.swift */; };
 		06C30EE11C68530D00410A09 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C30EDE1C68530D00410A09 /* OAuthClient.swift */; };
-		06C30EE21C68530D00410A09 /* OAuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */; };
 		06C30EE31C68530D00410A09 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C30EE01C68530D00410A09 /* OAuthViewController.swift */; };
 		C4BBC1E8DE0B60DB37AB711C /* Pods_OAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004C3D9BA7EC904223AFDAD8 /* Pods_OAuthClient.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		004C3D9BA7EC904223AFDAD8 /* Pods_OAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		060FC8101C685905006B542A /* OAuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OAuthStoryboard.storyboard; path = OAuthClientFramework/Resources/OAuthStoryboard.storyboard; sourceTree = "<group>"; };
 		062649B31C668FFC000978BB /* SampleMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleMainController.swift; sourceTree = "<group>"; };
 		062649BA1C669021000978BB /* OAuthClientFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthClientFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		062649BC1C669021000978BB /* OAuthClientFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuthClientFramework.h; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		062FFBD41C668D980012879C /* OAuthClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthClientTests.swift; sourceTree = "<group>"; };
 		062FFBD61C668D980012879C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C30EDE1C68530D00410A09 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthClient.swift; path = OAuthClientFramework/OAuthClient.swift; sourceTree = "<group>"; };
-		06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OAuthStoryboard.storyboard; path = OAuthClientFramework/OAuthStoryboard.storyboard; sourceTree = "<group>"; };
 		06C30EE01C68530D00410A09 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = OAuthClientFramework/OAuthViewController.swift; sourceTree = "<group>"; };
 		4ED547A1227CA60541CA418E /* Pods-OAuthClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthClient/Pods-OAuthClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BC7B308EE1CFA61D2F582709 /* Pods-OAuthClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthClient/Pods-OAuthClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		062649D81C669068000978BB /* OAuthClientFramework */ = {
 			isa = PBXGroup;
 			children = (
+				060FC8101C685905006B542A /* OAuthStoryboard.storyboard */,
 				06C30EDE1C68530D00410A09 /* OAuthClient.swift */,
-				06C30EDF1C68530D00410A09 /* OAuthStoryboard.storyboard */,
 				06C30EE01C68530D00410A09 /* OAuthViewController.swift */,
 			);
 			name = OAuthClientFramework;
@@ -364,7 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06C30EE21C68530D00410A09 /* OAuthStoryboard.storyboard in Resources */,
+				060FC8111C685905006B542A /* OAuthStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
