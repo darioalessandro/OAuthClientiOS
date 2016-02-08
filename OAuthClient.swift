@@ -24,6 +24,15 @@ public struct OAuthLoginData {
 
 /**
  Class used to perform OAuth client flow.
+ 
+ Configuration should be passed via app plist
+ 
+ Create a dictionary like this
+ 
+ OAuthConfig
+    -> client_id        (String)
+    -> scope            (String)
+    -> url              (String with url including path)
 */
 
 public class OAuthClient : NSObject {
@@ -50,7 +59,19 @@ public class OAuthClient : NSObject {
             result(res,error)
         }
         
+        let oAuthConfig = OAuthConfig()
+        
+        rootViewController.url = NSURL(string: "\(oAuthConfig["url"]!)?client_id=\(oAuthConfig["client_id"]!)&scope=\(oAuthConfig["scope"]!)")!
+        
         context.presentViewController(navController, animated: true, completion: nil)
+    }
+    
+    /**
+     If this does not work, we want it to blow up, but it would be nice if it could show the reason.
+    */
+    
+    public func OAuthConfig() -> NSDictionary {
+        return NSBundle.mainBundle().objectForInfoDictionaryKey("OAuthConfig") as! NSDictionary
     }
     
     public func logout(result : (Bool) -> Void) -> Void {

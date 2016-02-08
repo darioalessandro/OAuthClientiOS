@@ -15,7 +15,7 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var progress: UIProgressView!
     
-    let url = "http://192.168.1.73:9000?client_id=1&scope=/asdfsdf"
+    var url : NSURL?
     
     var webView : WKWebView?
     
@@ -36,7 +36,7 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
         self.webView = WKWebView(frame: self.view.frame, configuration:  theConfig)
         if let webView = self.webView {
             self.view.addSubview(webView)
-            webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
+            webView.loadRequest(NSURLRequest(URL: self.url!))
             webView.translatesAutoresizingMaskIntoConstraints = false
             self.view.addConstraints(webViewConstrains(webView))
             webView.navigationDelegate = self
@@ -85,7 +85,7 @@ class OAuthViewController : UIViewController, WKNavigationDelegate {
     func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: {(action) in
-            webView.loadRequest(NSURLRequest(URL: NSURL(string: self.url)!))
+            webView.loadRequest(NSURLRequest(URL: self.url!))
         }))
         presentViewController(alert, animated: true, completion: nil)
     }
