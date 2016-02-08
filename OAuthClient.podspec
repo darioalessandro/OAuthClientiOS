@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
  
   s.name         = "OAuthClient"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "OAuthClient."
   s.description  = <<-DESC
     OAuthClient
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/darioalessandro/OAuthClientiOS.git", :tag => s.version }
   s.source_files  = "OAuthClientFramework/*"
-  z.resources = ["Images/*.png", "Sounds/*"]
+  s.resources = ["OAuthClientFramework/Resources/*"]
 
  
 end
