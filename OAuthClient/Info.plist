@@ -5,7 +5,7 @@
 	<key>OAuthConfig</key>
 	<dict>
 		<key>url</key>
-		<string>http://localhost:9000</string>
+		<string>http://localhost:9001/nativeIndex</string>
 		<key>client_id</key>
 		<string>1</string>
 		<key>scope</key>

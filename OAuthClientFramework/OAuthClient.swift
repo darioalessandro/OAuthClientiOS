@@ -10,15 +10,12 @@ import Foundation
 
 public struct OAuthLoginData {
     public let username : String
-    public let token : String
-    public let refreshToken : String
+    public let cookie : String
     
     init(username : String,
-        token : String,
-        refreshToken : String) {
+        cookie : String) {
             self.username = username
-            self.token = token
-            self.refreshToken = refreshToken
+            self.cookie = cookie
     }
 }
 
@@ -61,7 +58,9 @@ public class OAuthClient : NSObject {
         
         let oAuthConfig = OAuthConfig()
         
-        rootViewController.url = NSURL(string: "\(oAuthConfig["url"]!)?client_id=\(oAuthConfig["client_id"]!)&scope=\(oAuthConfig["scope"]!)")!
+        //rootViewController.url = NSURL(string: "\(oAuthConfig["url"]!)?client_id=\(oAuthConfig["client_id"]!)&scope=\(oAuthConfig["scope"]!)")!
+        
+        rootViewController.url = NSURL(string: "\(oAuthConfig["url"]!)")!
         
         context.presentViewController(navController, animated: true, completion: nil)
     }
